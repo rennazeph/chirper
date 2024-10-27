@@ -11,9 +11,9 @@ const chirps = [
   "Una pizca de eternidad en cada instante."
 ];
 const usuarios = [
-  "RennaZinc",
-  "RennaZinc",
-  "RennaZinc",
-  "RennaZinc",
-  "RennaZinc",
+  "RennaZinc123",
+  "RealRennaZinc",
+  "xXRennaZincXx",
+  "RennaZinc_official",
+  "NotRennaZinc",
 ];
