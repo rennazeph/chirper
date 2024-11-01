@@ -74,7 +74,6 @@ const chirps = [
 "How do they milk an almond anyway?"
 "Crazy? I was crazy once."
 "I wonder if my friends have a group chat without me."
-"Apparently my first word was "The"."
 "We just need one more road and traffic will be fixed."
 "No thoughts. Head empty."
 "I know where to get the best croissant in the city but I'm not telling anyone."
