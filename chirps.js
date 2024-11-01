@@ -6,7 +6,7 @@ const chirps = [
 "The right size for the right buck. New place!"
 "Who's baking cookies? they smell delicious! May I have some?"
 "I kicked my neighbours welcome mat into the elevator pit. Oops."
-"I love kicking my neighbours "Welcome" rugs."
+"I love kicking my neighbours rug."
 "Need someone to walk your dogs? Professional Dog Walker for hire! DM for info."
 "Anyone know a good Italian place around?"
 "Dude, it's just a game, do you need to scream for every goal?"
