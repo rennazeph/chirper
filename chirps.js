@@ -94,7 +94,6 @@ const chirps = [
 "The city keeps changing. So should you."
 "For every cup of rice, add two cups of water."
 "I fear anything that thinks faster than I do."
-
 ];
 const usuarios = [
   "RennaZinc123",
