@@ -3,53 +3,53 @@ function displayRandomChirps() {
   timeline.innerHTML = ''; // Limpiar timeline
 
   const randomChirps = [];
-  const randomUsers = [...usuarios]; // Copia de la lista de usuarios
+  const randomUsers = [...usuarios]; 
 
   while (randomChirps.length < 5 && chirps.length > 0) {
     const randomChirpIndex = Math.floor(Math.random() * chirps.length);
     const randomUserIndex = Math.floor(Math.random() * randomUsers.length);
     const chirp = chirps[randomChirpIndex];
-    const user = randomUsers.splice(randomUserIndex, 1)[0]; // Elimina el usuario seleccionado
+    const user = randomUsers.splice(randomUserIndex, 1)[0]; // Eliminates User Dups
 
     if (!randomChirps.some(c => c.chirp === chirp)) {
       randomChirps.push({ chirp, user });
 
-      // Crear contenedor principal del chirp
+      // Chirp Main Container
       const chirpDiv = document.createElement('div');
       chirpDiv.className = 'chirp';
 
-      // Contenedor del texto del chirp y el botón de like
+      // Chirp Text and Like Container
       const chirpContentDiv = document.createElement('div');
       chirpContentDiv.className = 'chirp-content';
 
-      // Formatear el texto del chirp con el usuario estilo "hipervínculo"
+      // Text Formatting
       const chirpTextDiv = document.createElement('div');
       chirpTextDiv.className = 'chirp-text';
       chirpTextDiv.innerHTML = `<span class="username">@${user}</span>: ${chirp}`;
 
-      // Botón de like
+      // Like Button
       const likeButton = document.createElement('button');
       likeButton.className = 'like-button';
       likeButton.innerHTML = '❤';
 
-      // Evento para cambiar color del botón al hacer "like"
+      // Liked button event
       likeButton.addEventListener('click', () => {
         likeButton.classList.toggle('liked');
       });
 
-      // Añadir el texto y el botón al contenedor chirpContentDiv
+      // Children of the main container
       chirpContentDiv.appendChild(chirpTextDiv);
       chirpContentDiv.appendChild(likeButton);
 
-      // Añadir el chirp completo al timeline
+      // Pop it in the timeline
       chirpDiv.appendChild(chirpContentDiv);
       timeline.appendChild(chirpDiv);
     }
   }
 }
 
-// Evento para refrescar la línea de tiempo al hacer clic en el botón
+// Refresh Timeline
 document.getElementById('refresh-button').addEventListener('click', displayRandomChirps);
 
-// Mostrar los primeros chirps al cargar la página
+// Loading Start
 window.onload = displayRandomChirps;
